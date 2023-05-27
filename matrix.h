@@ -1,0 +1,2 @@
+extern void update(const double pos[8][3] , const int posO[2] , const double XYZ[3][2] , const int scale);
+extern void initXYZ_trans(const double x[3] , const double y[3] , const double z[3] , double XYZ[3][2]);
