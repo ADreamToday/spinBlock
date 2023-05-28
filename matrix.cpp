@@ -18,7 +18,7 @@ const double projection[2][3] = { { (-1)*sqrt2/2 , sqrt2/2      , 0      },
 #define DEC (pi/180)
 
 // 绕z轴旋转变换
-const double trans_span_z[3][3] = { {cos(DEC * 0.5) ,-sin(DEC * 0.5) , 0} ,
+const double trans_spin_z[3][3] = { {cos(DEC * 0.5) ,-sin(DEC * 0.5) , 0} ,
                                     {sin(DEC * 0.5) , cos(DEC * 0.5) , 0} ,
                                     {0            , 0            , 1}};
 
@@ -245,7 +245,7 @@ void update(const double pos[8][3] , const int posO[2] , const double XYZ[3][2] 
         // 旋转变换
         for (int i = 0; i < 8; i++)
         {
-            compute_matrix_3(trans_span_z , _pos[i] , _pos[i]);
+            compute_matrix_3(trans_spin_z , _pos[i] , _pos[i]);
         }
         
 
